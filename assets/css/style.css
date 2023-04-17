@@ -1,0 +1,142 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+}
+.sidebar {
+	height: 100%;
+	width: 150px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #191718;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.sidebar a {
+	display: 700;
+	padding: 10px;
+	text-decoration: none;
+	color: #aaaaaa;
+	padding: 14px 16px;
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.container {
+	height: 100vh;
+}
+
+.sidebar a.active {
+	color: #fff;
+}
+
+.sidebar a:hover {
+	cursor: default;
+	background-color: #5c5c5c;
+	color: #fff;
+}
+
+.contents {
+	margin-left: 150px;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-between;
+}
+
+.tab-content {
+	width: calc(100% - 200px);
+}
+
+.logo {
+	padding-top: 20px;
+	text-align: center;
+}
+.wrap__contents {
+	padding: 0 129px;
+}
+#home .intro p {
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	color: #000000;
+	width: 70%;
+	margin: 0 auto;
+}
+#home .intro {
+	margin-top: 30px;
+	background: #efefef;
+	padding: 38px 0;
+}
+#home .intro h5 {
+	padding-bottom: 18px;
+	text-align: center;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 21px;
+	color: #000000;
+}
+
+.blog__item h4 {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	padding-bottom: 10px;
+	color: #000000;
+}
+.blogs {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	padding-top: 30px;
+	grid-gap: 50px;
+}
+.blog__item p {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+
+	color: #000000;
+}
+.blog__item img {
+	float: left;
+}
+.content__footer {
+	padding: 30px 129px;
+	border-top: 1px solid #dedede;
+}
+
+@media screen and (max-width: 768px) {
+	.sidebar {
+		position: initial;
+		width: 100%;
+		height: 50px;
+		flex-direction: row;
+	}
+	.contents {
+		margin-left: 0;
+	}
+	.wrap__contents {
+		padding: 0 15px;
+	}
+	.sidebar a {
+		padding: 14px 14px;
+		font-size: 14px;
+	}
+	.content__footer {
+		margin-top: 30px;
+		padding: 30px 15px;
+	}
+}
